@@ -45,7 +45,7 @@ namespace ThreeOrMore.Classes
 
         public int HasWon()
         {
-            int winningScore = 5;
+            int winningScore = 50;
             if(_players[0].Score > winningScore)
             {
                 return 1;

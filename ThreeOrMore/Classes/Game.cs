@@ -32,8 +32,21 @@ namespace ThreeOrMore.Classes
                     while (keep != dice.Pair1() && keep != dice.Pair2())
                     {
                         Console.Write("Enter number of pair you would like to keep: ");
-                        keep = Convert.ToInt32(Console.ReadLine());
+                        string input = Console.ReadLine();
+                        if (input.Length == 1)
+                        {
+                            foreach(char c in "0123456789")
+                            {
+                                if (input[0] == c)
+                                {
+                                    keep = Convert.ToInt32(input);
+                                }
+                            }
+                            
+                        }
+                        
                     }
+                    Console.WriteLine("Final Dice: ");
                     dice.RollAllExcept(keep);
 
                     //ask which pair then call roll except on that number
@@ -45,6 +58,7 @@ namespace ThreeOrMore.Classes
                     Console.Write($"Press any key to reroll the other dice");
                     Console.ReadKey();
                     Console.WriteLine("");
+                    Console.WriteLine("Final Dice: ");
                     dice.RollAllExcept(dice.Pair1());
                 }
                 else
@@ -53,10 +67,22 @@ namespace ThreeOrMore.Classes
                     keep = 0;
                     while (keep < 1 || keep > 6)
                     {
+
                         Console.Write("Type a number to keep: ");
-                        keep = Convert.ToInt32(Console.ReadLine());
+                        string input = Console.ReadLine();
+                        if (input.Length == 1)
+                        {
+                            foreach (char c in "0123456789")
+                            {
+                                if (input[0] == c)
+                                {
+                                    keep = Convert.ToInt32(input);
+                                }
+                            }
+                        }
 
                     }
+                    Console.WriteLine("Final Dice: ");
                     dice.RollAllExcept(keep);
                     //choose number to reroll except
                 }

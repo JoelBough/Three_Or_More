@@ -64,7 +64,7 @@ namespace ThreeOrMore.Classes
 
         public void RollAllExcept(int dieValue)
         {
-            Console.WriteLine("Final Dice: ");
+
             foreach (Die die in _dice)
             {
                 if (die.Value != dieValue)
