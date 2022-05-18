@@ -11,6 +11,11 @@ namespace ThreeOrMore
     {
         static void Main()
         {
+            StartGame();
+        }
+
+        static void StartGame()
+        {
             Game game = new Game();
             game.PlayGame();
         }

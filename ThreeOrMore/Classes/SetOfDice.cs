@@ -31,7 +31,6 @@ namespace ThreeOrMore.Classes
             {
                 Console.WriteLine($"Die {i+1}: {_dice[i].Value}  ");
             }
-            CalcScore();
         }
 
         private void CalcScore()

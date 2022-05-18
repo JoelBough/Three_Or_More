@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ThreeOrMore.Interfaces
 {
-    internal interface IPlayers
+    internal interface IPlayer
     {
         public int Score { get; set; }
+        public void UpdateScore(int tally);
        
     }
 }

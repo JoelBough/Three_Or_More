@@ -7,7 +7,7 @@ using ThreeOrMore.Interfaces;
 
 namespace ThreeOrMore.Classes
 {
-    public class Player: IPlayers
+    public class Player: IPlayer
     {
 
         public Player()
@@ -19,7 +19,7 @@ namespace ThreeOrMore.Classes
         public int Score { get; set; }
 
 
-        public void GetScore(int tally)
+        public void UpdateScore(int tally)
         {
             if (tally < 3)
             {

@@ -13,7 +13,6 @@ namespace ThreeOrMore.Classes
 
         public SetOfPlayers()
         {
-            SetOfDice die = new SetOfDice();
             AddPlayers();
         }
 
@@ -30,25 +29,28 @@ namespace ThreeOrMore.Classes
             turn++;
             turn = turn % 2;
             Console.WriteLine($"Player {turn +1}'s turn");
-            Console.WriteLine("Press any key to roll");
+            Console.Write("Press any key to roll");
             Console.ReadKey();
+            Console.WriteLine("");
+
 
         }
 
         public void UpdateScore(int ThreePlusCount)
         {
-            _players[turn].GetScore(ThreePlusCount);
+            _players[turn].UpdateScore(ThreePlusCount);
             Console.WriteLine($"Player 1 Score: {_players[0].Score}");
             Console.WriteLine($"Player 2 Score: {_players[1].Score}");
         }
 
         public int HasWon()
         {
-            if(_players[0].Score > 2)
+            int winningScore = 5;
+            if(_players[0].Score > winningScore)
             {
                 return 1;
             }
-            else if(_players[1].Score > 2)
+            else if(_players[1].Score > winningScore)
             {
                 return 2;
             }
